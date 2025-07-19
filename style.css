@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #f0f0f0;
+}
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.logo {
+  width: 100px;
+  animation: bounce 2s infinite;
+}
+h1, h2 {
+  margin: 0.5rem 0;
+}
+p, li {
+  font-size: 1.1rem;
+}
+section {
+  padding: 2rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.project-card {
+  background: #1e1e1e;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  background: #2a2a2a;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.bounce { animation: bounce 2s infinite; }
+.pulse { animation: pulse 3s infinite; }
+.slide-in { animation: slide-in 1s ease-out forwards; opacity: 0; }
+.fade-in-left { animation: fade-in-left 1s ease-out forwards; opacity: 0; }
+
+@keyframes slide-in {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade-in-left {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 0.95rem; }
+  .project-card { font-size: 1rem; }
+}
